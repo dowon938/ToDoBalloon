@@ -15,6 +15,7 @@ const toDoContainer = document.querySelector('.toDoContainer');
 //   console.log(event.code);
 //   console.log(event);
 // });
+
 textRadio.addEventListener('click', (event) => {
   const target = event.target;
   const classList = target.classList;
@@ -35,10 +36,12 @@ textRadio.addEventListener('click', (event) => {
       break;
   }
 });
+
 checked.addEventListener('click', () => {
   textInput.focus();
   textRadio.classList.toggle('off');
 });
+
 submit.addEventListener('click', (event) => {
   event.preventDefault();
   const value = textInput.value;
@@ -46,7 +49,7 @@ submit.addEventListener('click', (event) => {
     return;
   }
   const priority = checked.innerHTML;
-  console.log(value);
+  // console.log(value);
   const item = document.createElement('li');
   item.setAttribute('class', `${priority} ${priority}size`);
   item.textContent = value;
@@ -54,20 +57,16 @@ submit.addEventListener('click', (event) => {
   textRadio.classList.add('off');
   textInput.value = '';
 });
+
 textInput.addEventListener('keydown', (event) => {
   let eventKey = document.querySelector(`[data-key='${event.code}']`);
-  if (!eventKey) {
-    return;
-  }
   eventKey.id = 'p';
 });
 textInput.addEventListener('keyup', (event) => {
   let eventKey = document.querySelector(`[data-key='${event.code}']`);
-  if (!eventKey) {
-    return;
-  }
   eventKey.id = '';
 });
+
 textInput.addEventListener('focus', () => {
   keyboard.style.opacity = '1';
   typingContainer.style.transform = 'translateY(0%)';

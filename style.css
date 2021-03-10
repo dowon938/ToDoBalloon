@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'RixYeoljeongdo_Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -12,33 +19,46 @@ body {
 }
 .urgentsize {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 170px;
-  line-height: 170px;
   border-radius: 50%;
   text-align: center;
   margin: 2px;
+  text-overflow: ellipsis;
+  color: snow;
+  font-size: 1.1em;
+  font-family: 'RixYeoljeongdo_Regular';
 }
 .midiumsize {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 120px;
   height: 120px;
-  line-height: 120px;
   border-radius: 50%;
   text-align: center;
   margin: 2px;
+  color: snow;
+  font-size: 1.1em;
+  font-family: 'RixYeoljeongdo_Regular';
 }
 .lowsize {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
-  line-height: 80px;
   border-radius: 50%;
   text-align: center;
   margin: 2px;
+  color: snow;
+  font-size: 1.1em;
+  font-family: 'RixYeoljeongdo_Regular';
 }
 .appContainer {
   position: absolute;
